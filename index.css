@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-ink: #070a11;
+  --color-void: #080c15;
+  --color-surface: #0d1119;
+  --color-card: #101728;
+  --color-card-hover: #131c2e;
+  --color-divider: #161d2e;
+  --color-border-subtle: rgba(255,255,255,0.07);
+  --color-cream: #f3ede4;
+  --color-parchment: #e8dcc8;
+  --color-gold: #c8a66e;
+  --color-gold-soft: rgba(200,166,110,0.12);
+  --color-gold-glow: rgba(200,166,110,0.28);
+  --color-copper: #b88a5c;
+  --color-ash: #8794aa;
+  --color-fog: #5b6b82;
+  --color-obsidian: #111827;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background-color: #070a11;
+  color: #f3ede4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: rgba(200,166,110,0.22); color: #f3ede4; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(110deg, transparent 30%, rgba(200,166,110,0.06) 50%, transparent 70%);
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+.light-theme { background-color: #f5f0e8; color: #1a1525; } .light-theme .bg-ink { background-color: #f3ede4 !important; } .light-theme .text-cream { color: #1e1812 !important; }
